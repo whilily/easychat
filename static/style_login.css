@@ -1,0 +1,46 @@
+body{
+    background-color:#000000;
+}
+
+#logo{
+    color:#ffffff;
+    text-align:center;
+    border-style:solid;
+    border-width:3px;
+    border-radius:6px;
+    border-color:#ffffff;
+    padding:3px;
+    display:inline;
+}
+
+.login_form{
+    color:#ffffff;
+    text-align:center;
+}
+
+#username{
+    width:20%;
+    height:30px;
+    font-size:25px;
+}
+
+#description{
+    font-style:italic;
+    font-size:15px;
+    margin:15px;
+}
+
+#submit_btn{
+    height:40px;
+    width:80px;
+    font-size:23px;
+    background-color:aquamarine;
+    border-style:none;
+    border-radius:3px;
+    transition:background 0.2s ease-in-out;
+}
+#submit_btn:hover{
+    background-color:#eeeeee;
+}
+
+h1{font-size:50px;}

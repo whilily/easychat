@@ -1,0 +1,20 @@
+[project]
+name = "easychat"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "test", email = "hello" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.162.0",
+    "websockets>=17.4",
+]
+
+[project.scripts]
+easychat = "easychat:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
