@@ -1,6 +1,3 @@
-//const ws = new WebSocket("ws://localhost:8000/ws")
-
-
 function servmsg(msg,parent,from_server = false,red = false){
     var newmsg = document.createElement("li");
     newmsg.textContent = msg;
@@ -8,6 +5,10 @@ function servmsg(msg,parent,from_server = false,red = false){
     if(red){newmsg.classList.add("red_msg");}
     parent.appendChild(newmsg);
 }
+
+try{var ws = new WebSocket("ws://127.0.0.1:8000/ws");}
+catch(error){alert(`failed: ${error.message}`)}
+ws.addEventListener("message",e => {servmsg(e.data,chatlist,from_server = true);})
 
 //get date
 const now = new Date();
@@ -26,7 +27,7 @@ ichat.focus();
 
 ichat.addEventListener("keydown",e => {
     if(e.key == "Enter" || e.key == "Return"){
-        servmsg(ichat.value,chatlist);
+        ws.send(ichat.value);
         ichat.value = "";
         e.preventDefault();
     }
