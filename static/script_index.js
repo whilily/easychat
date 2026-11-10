@@ -6,7 +6,7 @@ function servmsg(msg,parent,from_server = false,red = false){
     parent.appendChild(newmsg);
 }
 
-try{var ws = new WebSocket("ws://127.0.0.1:8000/ws");}
+try{var ws = new WebSocket(`wss://${window.location.host}/ws`);}
 catch(error){alert(`failed: ${error.message}`)}
 ws.addEventListener("message",e => {servmsg(e.data,chatlist,from_server = true);})
 
