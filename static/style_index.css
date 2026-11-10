@@ -1,3 +1,51 @@
+:root{
+    --fontsize:20px;
+    --fontfamily:"Gill Sans", sans-serif;
+}
+
 body{
     background-color:#000000;
+    color:green;
+    text-align:left;
+    cursor:none;
+}
+
+#chatlist{
+    border:none;
+    font-size:var(--fontsize);
+    font-family:var(--fontfamily);
+    list-style-type:">>>";
+    list-style-position:inside;
+    padding:0;
+    margin:0;
+}
+
+.server_msg{
+    font-weight:bold;
+}
+
+.red_msg{
+    color:red;
+}
+
+#ichat{
+    display:inline-flex;
+    background-color:#000000;
+    outline:none;
+    border:none;
+    color:green;
+    font-size:var(--fontsize);
+    font-family:var(--fontfamily);
+    text-decoration:underline green 3px;
+    padding:0;
+    margin:0;
+}
+
+#chat_label{
+    user-select:none;
+    color:green;
+    font-size:var(--fontsize);
+    font-family:var(--fontfamily);
+    padding:0;
+    margin:0;
 }
